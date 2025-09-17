@@ -1,0 +1,216 @@
+/* src/components/admin/AdminDashboard.css */
+
+/* Layout */
+.admin-wrap {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 18px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #222;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 28px rgba(19, 23, 34, 0.06);
+}
+
+/* Header */
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.admin-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Top messages */
+.msg {
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+.msg.ok {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid rgba(6,95,70,0.08);
+}
+.msg.err {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid rgba(159,18,57,0.08);
+}
+
+/* Controls row */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Buttons */
+button {
+  appearance: none;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #0f172a;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: transform .06s ease, box-shadow .06s ease, opacity .12s ease;
+}
+button:hover { transform: translateY(-1px); }
+button:active { transform: translateY(0); }
+button[disabled] { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+/* Secondary button style */
+.controls button[style], .controls button.secondary {
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid rgba(99,102,241,0.06);
+}
+
+/* Confirm span (bulk delete confirmation) */
+.confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #fff7ed;
+  color: #92400e;
+  font-size: 14px;
+}
+
+/* Table container */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 8px;
+  border: 1px solid #eef2f7;
+  background: #fff;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+thead {
+  background: #fbfbfe;
+}
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+th {
+  font-weight: 600;
+  color: #111827;
+  user-select: none;
+}
+tbody tr:hover { background: #fbfdff; }
+
+/* Zebra rows */
+tbody tr:nth-child(odd) { background: #fff; }
+tbody tr:nth-child(even) { background: #ffffff; }
+
+/* Sortable header hint */
+.sortable { cursor: pointer; }
+.sortable:hover { color: #0f172a; }
+
+/* Inputs inside table / forms */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ee;
+  outline: none;
+  font-size: 14px;
+  transition: box-shadow .08s ease, border-color .08s ease;
+  background: #fff;
+}
+input:focus {
+  box-shadow: 0 0 0 4px rgba(99,102,241,0.06);
+  border-color: #6366f1;
+}
+
+/* Small error text */
+.err {
+  color: #b91c1c;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* Actions column buttons */
+table td button {
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #eef2ff;
+  color: #3730a3;
+  border: 0;
+}
+table td button:hover { filter: brightness(0.98); }
+
+/* Inline edit inputs inside rows */
+tbody input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Add New User form block */
+.controls .add-form {
+  width: 420px;
+  max-width: calc(100% - 32px);
+  padding: 12px;
+  border-radius: 10px;
+  background: #fbfbff;
+  border: 1px solid #e6e9ee;
+  box-shadow: 0 6px 20px rgba(17,24,39,0.04);
+}
+.add-form h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+/* Form rows inside add-form */
+.add-form div { margin-bottom: 8px; }
+.add-form label { font-size: 13px; color: #374151; margin-bottom: 4px; display: inline-block; }
+.add-form input { width: 100%; }
+
+/* Responsive */
+@media (max-width: 920px) {
+  .admin-wrap { padding: 14px; margin: 16px; }
+  .controls { gap: 6px; }
+  .controls .add-form { width: 100%; }
+  table { min-width: 680px; }
+}
+
+@media (max-width: 560px) {
+  .admin-header h2 { font-size: 18px; }
+  th, td { padding: 8px; font-size: 13px; }
+  .pagination { justify-content: center; }
+}

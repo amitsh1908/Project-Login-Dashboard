@@ -1,0 +1,147 @@
+/* register.css */
+
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #374151;
+  --success: #065f46;
+  --error: #9b1c1c;
+  --shadow: 0 6px 18px rgba(15,23,42,0.06);
+  --radius: 12px;
+  --gap: 12px;
+  --pad: 18px;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* center page */
+.reg-wrap{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+  padding: 24px;
+}
+
+/* card */
+.reg-card{
+  width: 340px;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: calc(var(--pad) + 6px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* title */
+.reg-title{
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  text-align: left;
+}
+
+/* label & input */
+.reg-label{
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: var(--muted);
+  gap: 6px;
+}
+
+.reg-input{
+  appearance: none;
+  border: 1px solid #e6e9ee;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+  background: #fff;
+}
+
+.reg-input:focus{
+  border-color: #c7d2fe;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.08);
+}
+
+/* button */
+.reg-btn{
+  margin-top: 4px;
+  background: #111827;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: transform .08s ease, opacity .08s ease;
+}
+
+.reg-btn:active{ transform: translateY(1px); }
+.reg-btn:hover{ opacity: 0.95; }
+
+/* message */
+.reg-message{
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.reg-message.ok{
+  background: rgba(6,95,70,0.08);
+  color: var(--success);
+}
+
+.reg-message.err{
+  background: rgba(155,28,28,0.06);
+  color: var(--error);
+}
+/* Google button that matches register look */
+.reg-google{
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e6e9ee;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.03);
+  transition: transform .08s ease, box-shadow .08s ease, opacity .08s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.reg-google:hover{ opacity: 0.98; transform: translateY(-1px); }
+.reg-google:active{ transform: translateY(1px); }
+
+/* small google icon (subtle) */
+.reg-google .google-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  border-radius:4px;
+  font-weight:700;
+  background:#fff;
+  color:#db4437;
+  font-size:13px;
+  border:1px solid #f1f1f1;
+}
+
+/* small responsive tweak */
+@media (max-width: 400px){
+  .reg-card{ width: 100%; padding: 14px; border-radius: 10px; }
+}

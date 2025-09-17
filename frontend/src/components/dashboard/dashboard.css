@@ -1,0 +1,86 @@
+
+.dash-wrap {
+  max-width: 820px;
+  margin: 16px auto;
+  padding: 12px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.dash-logout {
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.dash-msg {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 6px;
+}
+.dash-msg.ok { background: #eef9f0; color: #0a6a2a; }
+.dash-msg.err { background: #fff1f1; color: #8a0b0b; }
+
+.dash-card {
+  border: 1px solid #e0e0e0;
+  padding: 12px;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.dash-row {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  align-items: center;
+}
+
+.dash-row strong {
+  width: 140px;
+  flex-shrink: 0;
+}
+
+.dash-actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.dash-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.dash-label {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.dash-field input {
+  padding: 8px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dash-empty {
+  border: 1px dashed #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Responsive: smaller screens */
+@media (max-width: 520px) {
+  .dash-row { flex-direction: column; align-items: flex-start; }
+  .dash-row strong { width: auto; }
+  .dash-wrap { padding: 8px; margin: 8px; }
+}
