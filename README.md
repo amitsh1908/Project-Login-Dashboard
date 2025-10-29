@@ -17,5 +17,3 @@ This is a full-stack web application with **frontend (React + Vite)** and **back
    - Sorting & Pagination for better usability.
 
 ---
-
-Project is under development. More updates coming soon.
